@@ -42,6 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(0, 0, 0);
 }
 
 .Role-Text p {
@@ -49,7 +50,13 @@
     height: 100%;
     z-index: 1;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Role-Text li{
+    z-index: 1;
+    font-size: 19px;
     font-weight: 500;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }

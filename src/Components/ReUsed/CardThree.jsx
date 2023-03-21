@@ -10,9 +10,21 @@ const CardThree =( props )=> {
                 <img src={props.Image} alt="card image" />
             </div>
 
-            <div className="Role-Text px-4 px-md-5">
-                <p className="text-center">{props.Description}</p>
-            </div>
+            {props.List == null && (
+                <div className="Role-Text px-4 px-md-5">
+                    <p className="text-center">{props.Description}</p>
+                </div>
+            )}
+            
+            {props.List != null && (
+                <div className="Role-Text pt-4">
+                    <ul>
+                        {props.List.map((item) => (
+                            <li><strong>{item}</strong></li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     )
 }

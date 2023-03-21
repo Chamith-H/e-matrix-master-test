@@ -3,6 +3,7 @@ import CardThree from "../ReUsed/CardThree"
 
 import Vision from "../../Assets/About/Vision.png"
 import Mission from "../../Assets/About/Mission.png"
+import Value from "../../Assets/About/Value.png"
 
 import CEOpic from "../../Assets/About/CEO.png"
 
@@ -23,6 +24,18 @@ const About =()=> {
             title:'MISSION',
             image:Mission,
             description:'To use Sri Lankan IT experts in delivering specialized IT professional services in a friendly innovative manner leading to customer satisfaction.'
+        },
+
+        {
+            title:'VALUES',
+            image:Value,
+            values:[
+                        '100%  trustworthy',
+                        'Customer-oriented ',
+                        'Quality conscious',
+                        'Positive, respectful, and friendly',
+                        'Always learning',
+                   ]
         }
     ]
 
@@ -45,10 +58,10 @@ const About =()=> {
             <div className="d-flex justify-content-center About-Content">
                 <div className="col-11 col-sm-10 pb-4">
                     <div className="Vision-Mission mb-5">
-                        <div className="row g-2">
+                        <div className="row g-2 d-flex justify-content-center">
                             {vision_mission.map((role) => (
                                 <div className="col-12 col-sm-6">
-                                    <CardThree Title={role.title} Image={role.image} Description={role.description}/>
+                                    <CardThree Title={role.title} Image={role.image} Description={role.description} List={role.values}/>
                                 </div>
                             ))}
                         </div>

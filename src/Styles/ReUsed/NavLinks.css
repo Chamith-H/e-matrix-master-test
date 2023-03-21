@@ -1,7 +1,8 @@
 .NavLinks a {
+    font-weight: 400px;
     position: relative;
     font-size: 18px;
-    color: rgb(255, 255, 255);
+    color:#2B3990;
     font-weight: 500;
     text-decoration: none;
 }
@@ -53,4 +54,15 @@
 .ScrolledLinks a:hover::after {
     width: 100%;
     transition-delay: 0.1s;
+}
+
+@media only screen and (max-width: 540px) {
+    .ScrolledLinks a {
+        font-size: 16px;
+    }
+
+    .NavLinks a {
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+    }
 }

@@ -331,8 +331,8 @@
 @media only screen and (max-width: 540px) {
 
     .Company-Status {
-        height: calc(100vh - 90px);
-        margin-top: calc(-100vh + 90px);
+        height: calc(100vh - 20px);
+        margin-top: calc(-100vh + 20px);
     }
 
     .Status-Des h1{
