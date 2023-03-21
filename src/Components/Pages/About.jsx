@@ -1,7 +1,6 @@
 import "../../Styles/Pages/About.css"
 import CardThree from "../ReUsed/CardThree"
 
-import Values from "../../Assets/About/ValuesImage.jpg"
 import Vision from "../../Assets/About/Vision.png"
 import Mission from "../../Assets/About/Mission.png"
 
@@ -29,7 +28,6 @@ const About =()=> {
 
     useEffect(() => {
         scroll_Top.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        
     }, []);
 
     return (
@@ -37,7 +35,9 @@ const About =()=> {
             <div className="About-Hero-Main">
                 <div className="About-Hero">
                     <div className="Align-About-Hero">
-                    <p>As the world continues in the Digital Journey and more Data, Artificial Intelligence, robotics, cloud, and other areas gather momentum, we believe that Sri Lanka has a country has many talented persons that can help customers to be successful in the Digital age. Our main focus areas include Data, AI, Cloud Integrations, Automated Testing, RPA, low code, and DevSecOps. We believe that technology is a powerful tool that can transform the way businesses operate. That's why we work tirelessly to develop cutting-edge solutions that can help our clients achieve their goals. What sets us apart from other suppliers is our highly specialized and experienced team of Principal Architects. Our architects have worked on world-wide developments and bring a wealth of experience and knowledge to each project. We take pride in our team's expertise and are dedicated to providing our clients with the highest level of services. Whether you're looking to streamline your operations, improve your customer experience, or gain a competitive edge in your industry, we're here to help. Our team has the expertise and experience to tackle even the most complex technological challenges, and we're committed to delivering results that exceed your expectations. Thank you for considering our company for your technology needs. We look forward to the opportunity to work with you and help you achieve your goals.</p>
+                        <div className="col-11 col-lg-10">
+                            <p>As the world continues in the Digital Journey and more Data, Artificial Intelligence, robotics, cloud, and other areas gather momentum, we believe that Sri Lanka has a country has many talented persons that can help customers to be successful in the Digital age. Our main focus areas include Data, AI, Cloud Integrations, Automated Testing, RPA, low code, and DevSecOps. We believe that technology is a powerful tool that can transform the way businesses operate. That's why we work tirelessly to develop cutting-edge solutions that can help our clients achieve their goals. What sets us apart from other suppliers is our highly specialized and experienced team of Principal Architects. Our architects have worked on world-wide developments and bring a wealth of experience and knowledge to each project. We take pride in our team's expertise and are dedicated to providing our clients with the highest level of services. Whether you're looking to streamline your operations, improve your customer experience, or gain a competitive edge in your industry, we're here to help. Our team has the expertise and experience to tackle even the most complex technological challenges, and we're committed to delivering results that exceed your expectations. Thank you for considering our company for your technology needs. We look forward to the opportunity to work with you and help you achieve your goals.</p>
+                        </div>
                     </div>
                 </div>
             </div>

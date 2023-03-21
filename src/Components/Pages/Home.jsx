@@ -17,8 +17,9 @@ import Digital from "../../Assets/Offerings/Digital.png"
 import LowCode from "../../Assets/Offerings/LowCode.png"
 import CardTwo from "../ReUsed/CardTwo"
 
-import More from "../../Assets/Icons/SeeMore.png"
-import HomeAbout from "../../Assets/Home/AboutHome.png"
+import Facebook from "../../Assets/Icons/Facebook.png"
+import LinkedIn from "../../Assets/Icons/Linkedin.png"
+import Twitter from "../../Assets/Icons/Twitter.png"
 
 import Research from "../../Assets/Home/ResearchInovation.jpg"
 import Skill from "../../Assets/Home/SkillUpdate.jpg"
@@ -45,6 +46,23 @@ const Home =( props )=> {
 
     const sliderBox = useRef(null)
     const slide = useRef(null)
+
+    const contacts = [
+                        {
+                            link:'',
+                            image:Facebook
+                        },
+
+                        {
+                            link:'',
+                            image:LinkedIn
+                        },
+
+                        {
+                            link:'',
+                            image:Twitter
+                        },
+                     ]
 
     const benefits = [
                         {
@@ -233,7 +251,7 @@ const Home =( props )=> {
                                 <div className="col-11 col-md-10 pe-4 pe-md-0 Border2">
                                     <div className="Company-Introduction ms-5">
                                         <h1 className="text-start"><span>e-</span>Matrix</h1>
-                                        <h2 className="text-start">ENGINEERING THE DIGITAL FUTURE</h2>
+                                        <h2 className="text-start"><strong>ENGINEERING THE DIGITAL FUTURE</strong></h2>
                                     </div>
                                 </div>
 
@@ -242,12 +260,22 @@ const Home =( props )=> {
                                 <div className="col-3 Border3"/>
 
                                 <div className="col-7 ps-3">
-                                    <h5 className="text-start Hero-Explain">Transforming the digital world with trusted partnership and expert knowledge - where your success is our top priority.</h5>
+                                    <h5 className="text-start Hero-Explain"><strong>Transforming the digital world with trusted partnership and expert knowledge - where your success is our top priority.</strong></h5>
 
                                     <div className="d-flex justify-content-start Learn-More">
                                         <button onClick={()=>navigate("about-us")} className="ps-4 mt-1">Learn More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div className="Comany-Contacts d-flex justify-content-center justify-content-md-start">
+                                {contacts.map((contact) => (
+                                    <div className="Single-Contact">
+                                        <a href="">
+                                            <img src={contact.image} alt="Contact-Icon" />
+                                        </a>
+                                    </div>
+                                ))}
                             </div>
                         </div>
                     </div>

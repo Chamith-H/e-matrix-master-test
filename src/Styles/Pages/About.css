@@ -1,15 +1,22 @@
 .About-Hero{
     z-index: -2;
     margin-top: -116px;
-    background-image: url("../../Assets/About/Background.jpg");
     background-size: cover;
 }
 
 .Align-About-Hero {
-    background-color: rgba(255, 255, 255, 0.815);
+    padding-top: 136px;
+    padding-bottom: 100px;
+    background-color: rgb(255, 255, 255);
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.Align-About-Hero p {
+    font-size: 17px;
+    font-weight: 500;
+    text-align: justify;
 }
 
 .About-Hero-Content {
@@ -28,52 +35,9 @@
 
 .About-Hero-Content p {
     color: rgba(0, 0, 0, 0.836);
+    
 }
 
-.Our-Values {
-    margin-top: 93px;
-    margin-bottom: 85px;
-}
-
-.Our-Values h3 {
-    color: rgb(0, 0, 0);
-    font-weight: 800;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.Our-Values span {
-    color: #2b3990;
-}
-
-.ValuesImage {
-    width: 150px;
-    height: 150px;
-    border-style: solid;
-    border-width: 2px;
-    padding-left: 20px;
-    padding-top: 20px;
-    border-color: rgb(218,165,32);
-}
-
-.ValuesImage img {
-    width: 150px;
-    border-style: solid;
-    border-width: 2px;
-    border-color:#2b3990;
-}
-
-.Values p {
-    font-size: 17px;
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-    margin-bottom: -2px;
-}
-
-.Align-About-Hero h6 {
-    color: rgba(255, 255, 255, 0.699);
-    font-size: 18px;
-    font-weight: 400;
-}
 
 .About-Content{
     background-color: rgb(243,244,249);
