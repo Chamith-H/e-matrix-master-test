@@ -1,0 +1,168 @@
+.About-Hero{
+    z-index: -2;
+    margin-top: -116px;
+    background-image: url("../../Assets/About/Background.jpg");
+    background-size: cover;
+}
+
+.Align-About-Hero {
+    background-color: rgba(255, 255, 255, 0.815);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.About-Hero-Content {
+    border-left-style: solid;
+    border-top-style: solid;
+    border-top-width: 2px;
+    border-left-width: 2px;
+    border-left-color:#2b3990;
+    border-top-color:rgb(218,165,32)
+}
+
+.About-Hero-Content p {
+    font-size: 18px;
+    text-align: justify;
+}
+
+.About-Hero-Content p {
+    color: rgba(0, 0, 0, 0.836);
+}
+
+.Our-Values {
+    margin-top: 93px;
+    margin-bottom: 85px;
+}
+
+.Our-Values h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Our-Values span {
+    color: #2b3990;
+}
+
+.ValuesImage {
+    width: 150px;
+    height: 150px;
+    border-style: solid;
+    border-width: 2px;
+    padding-left: 20px;
+    padding-top: 20px;
+    border-color: rgb(218,165,32);
+}
+
+.ValuesImage img {
+    width: 150px;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#2b3990;
+}
+
+.Values p {
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    margin-bottom: -2px;
+}
+
+.Align-About-Hero h6 {
+    color: rgba(255, 255, 255, 0.699);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.About-Content{
+    background-color: rgb(243,244,249);
+}
+
+.Vision-Mission {
+   margin-top: -85px;
+}
+
+.CEO-Message h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+}
+
+.CEO-Message span {
+    color: rgba(0, 0, 167, 0.781);
+}
+
+.CEO-Message p {
+    text-align: justify;
+    color: rgb(77, 77, 77);
+}
+
+.CEO-Column img {
+    width: 250px;
+    border-radius: 100%;
+}
+
+.CEO-Row {
+    box-shadow: 2px 8px 30px 0px #00000067;
+    border-radius: 10px;
+}
+
+.CEO-Column {
+    background: linear-gradient(to left, rgb(255, 255, 255) 50%, #2b3990 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.CEO-Box {
+    background: linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(218,165,32) 50%);
+    border-style: solid;
+    border-color: rgb(218,165,32);
+    border-width: 2px;
+    border-radius: 100%;
+}
+
+.CEO-References p {
+    margin-bottom: -3px;
+    font-weight: 500;
+    color: rgb(49, 49, 49);
+}
+
+@media only screen and (max-width: 768px) {
+    .About-Hero-Content {
+        border-left-style: none;
+    }
+
+    .CEO-Column {
+        border-bottom-left-radius: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+    .CEO-Column {
+        border-bottom-left-radius: 0px;
+        border-bottom-style: solid;
+        border-top-right-radius: 10px;
+        border-width: 1px;
+        border-color: #2b3990;
+    }
+
+    .CEO-Column img {
+        width: 200px;
+    }
+
+    .CEO-References {
+        background-color: rgb(255, 255, 255);
+        border-style: none;
+        border-top-style: solid;
+        border-color:#2b3990;
+        border-width: 1px;
+        border-radius: 0px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+}

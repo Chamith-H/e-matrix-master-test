@@ -1,0 +1,333 @@
+.Hero-Back {
+    margin-top: -116px;
+    position: sticky;
+    z-index: -2;
+}
+
+.Hero-Section {
+    background-image: url("../../Assets/Home/HeroBackground.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.Hero-Section-Full {
+    background-image: url("../../Assets/Home/HeroBackground.jpg");
+    background-size: cover;
+    height: 100vh;
+}
+
+.Align-Hero {
+    background: linear-gradient(to bottom, rgba(126, 130, 189, 0.384), rgba(255, 255, 255, 0));
+    width: 100%;
+    height: 100%;
+}
+
+.Align-Hero-Full {
+    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.Align-Hero-Scrolled {
+    background-color: rgba(0, 0, 0, 0.795);
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 600px;
+    border-bottom-right-radius: 600px;
+}
+
+.Style-Shadow {
+    /* box-shadow: 0px -17px 20px 0px #00000052; */
+    border-radius: 10px;
+}
+
+.Company-Status {
+    position: relative;
+    height: calc(100vh - 170px);
+    margin-top: calc(-100vh + 170px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Border1 {
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: #2B3990;
+    height: 40px;
+}
+
+.Border2 {
+    border-left-style: solid;
+    border-color: #2B3990;
+}
+
+.Border3 {
+    height: 40px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-left-color: #2B3990;
+    border-bottom-color: rgb(218,165,32);
+    border-right-color: rgb(218,165,32);
+}
+
+.Company-Introduction h1 {
+    margin-bottom: 0px;
+    font-size: 70px;
+    color: rgb(218,165,32);
+    text-shadow: 4px 4px 3px #000000;
+}
+
+.Company-Introduction span {
+    color: #2B3990;
+    font-size: 76px;
+    font-style: italic;
+}
+
+.Company-Introduction h2 {
+    color: #000000;
+    text-shadow: 2px 2px 2px #000000a1;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.Hero-Explain {
+    font-style: italic;
+    font-size: 19px;
+    color: black;
+}
+
+.Learn-More button {
+    background-color: rgba(240, 242, 255, 0);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2B3990;
+    color: #2B3990;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #2B3990;
+    color: rgb(255, 255, 255);
+    /* box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.616); */
+}
+
+.Learn-More button:hover {
+    background-color: #ffffff;
+    color: #2B3990;
+}
+
+.Learn-More button:active {
+    border-color: rgb(218,165,32);
+    color: rgb(218,165,32);
+}
+
+.Learn-More i {
+    font-size: 29px;
+    color: rgb(218,165,32);
+}
+
+.Learn-More i:hover {
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.Company-Title {
+    margin-bottom: -40px;
+    background: #ffffff;
+}
+
+.Company-Title h1 {
+    font-size: 90px;
+}
+
+.Head-Font {
+    font-size: 80px;
+    text-align: end;
+}
+
+.Tail-Font {
+    text-align: end;
+}
+
+.Default-Font {
+    color: rgb(0, 0, 0);
+}
+
+.Scroll-Font {
+    color: rgba(255, 255, 255, 0.363);
+}
+
+.Why-Choose {
+    background: rgb(255, 255, 255);
+}
+
+.About-Us-Home {
+    background: rgb(255, 255, 255);
+}
+
+.Why-Choose h2, .Our-Offerings h2, .About-Us-Home h2, .E-Matrix-Campus h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(0, 0, 0);
+}
+
+.Why-Choose span, .Our-Offerings span, .About-Us-Home span, .E-Matrix-Campus span {
+    color: #2B3990;
+}
+
+.Why-Choose h5, .Our-Offerings h5, .About-Us-Home h5, .E-Matrix-Campus h5 {
+    color: rgb(77, 77, 77);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.Our-Offerings {
+    background: rgb(255, 255, 255);
+}
+
+.Home-About-Description {
+    background-color: rgba(0, 0, 0, 0.781);
+    color: rgb(255, 255, 255);
+}
+
+.About-Home-Des p {
+    text-align: justify;
+}
+
+.Read-More-About img {
+    margin-left: 3px;
+    height: 12px;
+}
+
+.Read-More-About a {
+    color: rgb(255, 255, 255);
+}
+
+.E-Matrix-Campus {
+    background: rgb(255, 255, 255);
+}
+
+.Campus-Image img {
+    width: 400px;
+}
+
+.Home-About-Image img {
+    width: 100%;
+}
+
+.Navigate-About {
+    background-color: #2B3990;
+    width: 140px;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+}
+
+.Navigate-About h6 {
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.Navigate-About img {
+    height: 18px;
+}
+
+.Campus-Description {
+    box-shadow: 20px -20px 30px 0px #0000001c;
+    background: rgb(255, 255, 255);
+}
+
+
+.Single-Campus-Point li {
+    color: rgb(0, 0, 0);
+}
+
+.slide-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.Slider-Buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: -42px;
+    margin-right: -42px;
+    right: 0;
+    left: 0;
+    top:0;
+    bottom: 0;
+    position: absolute;
+}
+
+.Slider-Buttons button {
+    border-style: none;
+    background-color: rgba(0, 255, 255, 0);
+    color: #2B3990;
+    font-size: 32px;
+}
+
+.Slider-Buttons button:hover {
+    color: rgb(218,165,32);
+}
+
+.Slide-View {
+    box-shadow: 0px 7px 30px 0px #000000c5;
+}
+
+/* Animations */
+.Info-Why-Cards img {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .Info-Why-Cards img.animate {
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+@media only screen and (max-width: 540px) {
+    .Status-Des h1{
+        font-size: 60px;
+    }
+
+    .Status-Des h3 {
+        font-size: 23px;
+    }
+
+    .Campus-Image img {
+        width: 100%;
+    }
+    
+    .Company-Introduction span {
+        font-size: 60px;
+    }
+
+    .Company-Introduction h1 {
+        font-size: 60px;
+    }
+}

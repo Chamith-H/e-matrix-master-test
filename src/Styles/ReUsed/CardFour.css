@@ -1,0 +1,22 @@
+.CardFour {
+    display: flex;
+    flex-direction: row;
+}
+
+.CardFour-End {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.CardFour-Image img {
+    width: 50px;
+}
+
+.CardFour-Details h6 {
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.CardFour-Details p {
+    margin-top: -8px;
+    color: rgba(255, 255, 255, 0.63);
+}

@@ -1,0 +1,26 @@
+.Card-Five {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.Card-Five img {
+    height: 100%;
+}
+
+.Card-Five-Status {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.158);
+}
+
+.Card-Five-Description {
+    background-color: rgba(0, 0, 0, 0.808);
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,13 @@
+.CardTwo {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 10px 20px 0px #0000008f;
+    border-radius: 0px;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CardTwo-Image img {
+    width: 25%;
+}

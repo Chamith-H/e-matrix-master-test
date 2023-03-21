@@ -1,0 +1,152 @@
+nav {
+    position: sticky;
+    z-index: 3;
+    top: -37px;
+}
+
+.Header {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.Header-Links {
+    display: flex;
+    align-items: center;
+}
+
+.Scrolled {
+    padding-top: 60px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    box-shadow: 0px 10px 20px 0px #0000006e;
+}
+
+.Responsive-View {
+    top: 47px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Toggler-Click {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.479);
+    height: 45px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.Toggler-Scrolled {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 22, 148, 0.479);
+    height: 45px;
+    width: 60px;
+    border-radius: 8px;
+}
+
+.Toggler-Button img:active {
+    height: 39px;
+}
+
+.Toggler {
+    height: 40px;
+}
+
+.Brand {
+    height: 65px;
+}
+
+.Initial {
+    height: 112px;
+}
+
+.DefaultButton {
+    background-color: rgba(240, 242, 255, 0);
+    font-weight: 500;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-radius: 50px;
+}
+
+.DefaultButton:hover {
+    background-color: rgb(51, 16, 16);
+    color:#000000;
+    font-weight: 500;
+}
+
+.DefaultButton:active {
+    color:rgb(218,165,32);
+    font-weight: 500;
+}
+
+.ScrolledButton {
+    background-color: rgba(240, 242, 255, 0);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2B3990;
+    color: #2B3990;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #2B3990;
+    color: rgb(255, 255, 255);
+}
+
+.ScrolledButton:hover {
+    background: #ffffff;
+    color: #2B3990;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #2B3990;
+}
+
+.ScrolledButton:active {
+    background: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(218,165,32);
+    color: rgb(218,165,32);
+}
+
+.Toggler-Expand {
+    padding-left: 15px;
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    background: #2B3990;
+    height: 235px;
+}
+
+.Expand-Scrolled {
+    position: absolute;
+    top: 117px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    height: 235px;
+    box-shadow: 0px 20px 20px 0px #0000006e;
+}
