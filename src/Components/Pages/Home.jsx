@@ -288,11 +288,17 @@ const Home =( props )=> {
                     <div className="d-flex justify-content-center mt-4 pt-3">
                         <div className="col-11 col-sm-10">
                             <div className="row gx-0 gy-3">
-                                {offerings.map((offer) => (
-                                    <div className="col-md-6 col-lg-4 px-2">
-                                        <CardTwo Title={offer.title} Image={offer.image} Description={offer.description}/>
+                                {offerings.map((offer, index) => (
+                                    <div key={index} className="col-md-6 col-lg-4 px-2">
+                                        <div className="Offering-Button" type="button" onClick={()=> navigate(`/offerings?choose=${index}`)}>
+                                            <CardTwo Title={offer.title} Image={offer.image} Description={offer.description}/>
+                                        </div>
                                     </div>
                                 ))}
+                            </div>
+
+                            <div className="d-flex justify-content-center justify-content-md-end pe-2">
+                                <button onClick={()=>navigate(`/offerings?choose=${0}`)} className="More-Offerings ps-4 mt-4 mt-md-3 mt-lg-2">See More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
                             </div>
                         </div>
                     </div>

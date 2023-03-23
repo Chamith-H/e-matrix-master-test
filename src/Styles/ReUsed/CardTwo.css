@@ -11,3 +11,8 @@
 .CardTwo-Image img {
     width: 25%;
 }
+
+.CardTwo p {
+    color: black;
+    font-weight: 400;
+}

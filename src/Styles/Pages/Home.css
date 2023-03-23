@@ -102,7 +102,7 @@
     color: rgb(51, 51, 51);
 }
 
-.Learn-More button {
+.Learn-More button, .More-Offerings {
     background-color: rgba(240, 242, 255, 0);
     height: 40px;
     display: flex;
@@ -120,23 +120,27 @@
     /* box-shadow: 6px 6px 30px 0px rgba(0, 0, 0, 0.616); */
 }
 
-.Learn-More button:hover {
+.Learn-More button:hover, .More-Offerings:hover {
     background-color: #ffffff;
     color: #2B3990;
 }
 
-.Learn-More button:active {
+.Learn-More button:active, .More-Offerings:active {
     border-color: rgb(218,165,32);
     color: rgb(218,165,32);
 }
 
-.Learn-More i {
+.Learn-More i, .More-Offerings i {
     font-size: 29px;
     color: rgb(218,165,32);
 }
 
-.Learn-More i:hover {
+.Learn-More i:hover, .More-Offerings i:hover {
     background-color: rgba(240, 248, 255, 0);
+}
+
+.Offering-Button:hover{
+    box-shadow: 0px 6px 10px 0px #2B3990;
 }
 
 .Comany-Contacts {

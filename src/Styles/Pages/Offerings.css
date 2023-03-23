@@ -1,36 +1,62 @@
-.Hero-Offerings {
-    margin-top: -110px;
-    background-image: url("../../Assets/Offerings/OfferingsBackground.jpg");
-    background-size: cover;
-    height: 85vh;
-}
-
-.Align-Hero-Offerings {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.39);
-}
-
-.Offering-Contents {
-    height: 70%;
-}
-
-.Offerings-Points {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: calc(-85vh + 110px);
-    height: calc(85vh - 110px);
-}
-
-.Align-Points {
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-left-color: rgba(255, 255, 255, 0.904);
-}
-
-.Handle-View {
+.Offerings {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.Top-Offering-Border {
+    width: 100%;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgb(218,165,32);
+}
+
+.Single-Offering {
+    box-shadow: 0px 12px 20px 0px #00000067;
+    position: relative;
+}
+
+.Backgrund-Offring {
+    z-index: -1;
+    position: absolute;
+    top:80px;
+    left:0;
+    right:0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Backgrund-Offring img {
+    height: 90%;
+    opacity: 0.2;
+}
+
+.Offring-Intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Offring-Intro img {
+    width: 50px;
+}
+
+.Offring-Intro h2 {
+    font-weight: 800;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #2B3990;
+    margin-bottom: 0px;
+}
+
+.Offring-Intro h6 {
+    color: rgb(0, 0, 0);
+    color: rgb(97, 97, 97);
+}
+
+.List-Things li {
+    color: black;
 }

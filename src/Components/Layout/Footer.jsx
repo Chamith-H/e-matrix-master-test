@@ -72,7 +72,6 @@ const Footer =( props )=> {
                                 <a href="">Terms of Use</a>
                                 <a href="">Privacy</a>
                                 <a href="">Anti Spam</a>
-                                <a href="">Site Map</a>
                             </div>
                                 
                         </div>
