@@ -365,5 +365,6 @@
 
     .Company-Introduction h2 {
         font-size: 22px;
+        text-shadow: 2px 2px 2px #00000065;
     }
 }

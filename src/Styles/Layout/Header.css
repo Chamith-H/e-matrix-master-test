@@ -71,7 +71,8 @@ nav {
 }
 
 .Initial {
-    height: 65px;
+    margin-top: -27px;
+    height: 95px;
 }
 
 .DefaultButton {
@@ -136,7 +137,7 @@ nav {
 .Toggler-Expand {
     padding-left: 15px;
     position: absolute;
-    top: 140px;
+    top: 135px;
     width: 100%;
     background: #2B3990;
     height: 235px;

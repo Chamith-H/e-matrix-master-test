@@ -45,7 +45,7 @@
     width: 50px;
 }
 
-.Offring-Intro h2 {
+.Offring-Intro h3 {
     font-weight: 800;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #2B3990;
@@ -53,10 +53,20 @@
 }
 
 .Offring-Intro h6 {
-    color: rgb(0, 0, 0);
     color: rgb(97, 97, 97);
 }
 
 .List-Things li {
     color: black;
+}
+
+@media only screen and (max-width: 540px) {
+    .Backgrund-Offring img {
+        opacity: 0.1;
+        height: 50%;
+    }
+
+    .Experty-List h5, .Technology-List h5 {
+        font-size: 17px;
+    }
 }

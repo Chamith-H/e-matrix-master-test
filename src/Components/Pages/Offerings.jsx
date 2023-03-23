@@ -85,15 +85,15 @@ const Offerings =()=> {
         <div className="Offerings">
             <div ref={top} className="Top-Offering-Border mt-4"></div>
 
-            <div className="col-11 col-lg-10 pt-5">
+            <div className="col-11 col-lg-10 pt-4 pt-md-5">
                 {offerings.map((offer, index) => (
-                    <div ref={scroll} key={index} className="Single-Offering mb-4 pt-4 pt-sm-5 pb-4">
+                    <div ref={scroll} key={index} className="Single-Offering mb-3 pt-4 pt-sm-5 pb-3 pb-md-4">
                         {index == selection && (
                             <div ref={scroll}></div>
                         )}
 
                         <div className="Offring-Intro pb-3">
-                            <h2 className="text-center">{offer.title}</h2>
+                            <h3 className="text-center mx-4">{offer.title}</h3>
                             <h6 className="mx-4 mx-sm-5 text-center">{offer.description}</h6>
                         </div>
 
