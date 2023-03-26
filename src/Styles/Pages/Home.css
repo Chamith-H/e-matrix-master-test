@@ -307,6 +307,56 @@
     box-shadow: 0px 7px 30px 0px #000000c5;
 }
 
+.Align-Arrow-Boxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Small-Arr {
+    width: 120%;
+}
+
+.Full-Bar {
+    width: 100%;
+}
+
+.Arrow-Content {
+    position: absolute;
+    top:0;
+    left:10px;
+    right:0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Arrow-Content p {
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.Arrow-Box-Content {
+    position: absolute;
+    top:40%;
+    left:10px;
+    right:0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Arrow-Box {
+    width: 100%;
+}
+
+.Arrow-Box-Content h6 {
+    color: #ffffff;
+}
+
 /* Animations */
 .Info-Why-Cards img {
     opacity: 0;

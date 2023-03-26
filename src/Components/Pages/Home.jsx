@@ -33,6 +33,12 @@ import { useNavigate } from "react-router-dom"
 import { animate, motion } from "framer-motion"
 import CardFive from "../ReUsed/CardFive"
 
+import SmallArrow from "../../Assets/Skills/SmallArrow.svg"
+import FullBar from "../../Assets/Skills/FullBar.png"
+import ArrowBox from "../../Assets/Skills/ArrowBox.svg"
+import MiddleBar from "../../Assets/Skills/MiddleBar.png"
+import TitleHead from "../../Assets/Skills/TitleHead.png"
+
 const Home =( props )=> {
 
     const navigate = useNavigate()
@@ -156,6 +162,9 @@ const Home =( props )=> {
                                 description:'Establish a consistent research environment to empower our engineers to drive innovation for the benefit of our customers',
                             },
                        ]
+
+        const skills = ['Data', 'Artificial Inteigence', 'Digital Assurane', 'Low code & RPA', 'Dev Sec & Cloud Ops', 'Cloud Integration']
+        const details = ['Deployment with consistent monitoring', 'Upskill, cross skill and evaluate', 'Experience and fresh graduate harvesting']
 
     const set_Slider_PREVIOUS =()=> {
         if(sliderBox.current !=null) {
@@ -315,6 +324,50 @@ const Home =( props )=> {
                                     <CardOne Title={benefit.title} Image={benefit.image} Description={benefit.description}/>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="d-flex justify-content-center bg-white">
+                <div className="col-11 col-lg-10">
+                    <div className="row g-0">
+                        <div className="col-2 Align-Arrow-Boxes">
+                            {details.map((detail) => (
+                                <div className="col-12 position-relative">
+                                    <img className="Arrow-Box" src={ArrowBox} alt="Box-Arrow" />
+
+                                    <div className="Arrow-Box-Content">
+                                        <h6 className="text-center ms-3 me-4">{detail}</h6>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className="col-10 d-flex flex-column">
+                            <div>
+                                <img className="Full-Bar" src={FullBar} alt="Ful-Bar" />
+                            </div>
+
+                            <div className="row g-0">
+                                {skills.map((skill) => (
+                                    <div className="col-2 position-relative">
+                                        <img className="Small-Arr my-2" src={SmallArrow} alt="" />
+
+                                        <div className="Arrow-Content px-3">
+                                            <p className="text-center mx-4 mt-5">{skill}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <div>
+                                <img className="Full-Bar mb-4" src={MiddleBar} alt="Middle-Bar" />
+                            </div>
+
+                            <div>
+                                <img className="Full-Bar" src={TitleHead} alt="Title-Head" />
+                            </div>
                         </div>
                     </div>
                 </div>
