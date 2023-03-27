@@ -38,6 +38,8 @@ import FullBar from "../../Assets/Skills/FullBar.png"
 import ArrowBox from "../../Assets/Skills/ArrowBox.svg"
 import MiddleBar from "../../Assets/Skills/MiddleBar.png"
 import TitleHead from "../../Assets/Skills/TitleHead.png"
+import Diagram from "../../Assets/Skills/diagram.png"
+import DiagramX from "../../Assets/Skills/diagramAction.png"
 
 const Home =( props )=> {
 
@@ -52,6 +54,16 @@ const Home =( props )=> {
 
     const sliderBox = useRef(null)
     const slide = useRef(null)
+
+    const [expandSkill, setExpandSkill] = useState(false)
+    const [initial, setInitial] = useState(0)
+    const [animate, setAnimate] = useState(0)
+    const [sizingOne, setSizingOne] = useState(0)
+    const [sizingTwo, setSizingTwo] = useState(0)
+
+    const [fullAnimate, setFulAnimate] = useState(true)
+    const [scaleUp, setScaleUp] = useState(0)
+    const [scaleDown, setScaleDown] = useState(1)
 
     const contacts = [
                         {
@@ -169,17 +181,53 @@ const Home =( props )=> {
     const set_Slider_PREVIOUS =()=> {
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft -= box
+            slide.current.scrollLeft -= (box + 4)
         }
     }
 
     const set_Slider_NEXT =()=> {
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft += box
+            slide.current.scrollLeft += (box + 4)
         }
     }
 
+    const expand_Skills =async()=> {
+        await setInitial(-90)
+        await setAnimate(0)
+        await setSizingOne(0)
+        await setSizingTwo(1)
+
+        setExpandSkill(true)
+    }
+
+    const collapse_Skills =async()=> {
+        await setInitial(0)
+        await setAnimate(-90)
+        await setSizingOne(1)
+        await setSizingTwo(0)
+
+        await setExpandSkill(false)
+        await setExpandSkill(true)
+
+        
+
+        const timeoutId = setTimeout(() => {
+            setExpandSkill(false)
+        }, 200); 
+      
+        return () => clearTimeout(timeoutId);
+    }
+
+    useEffect(() => {
+            
+            const timeoutId = setTimeout(() => {
+                setFulAnimate(!fullAnimate)
+            }, 500);
+
+        return () => clearTimeout(timeoutId);
+        
+    }, [fullAnimate]);
 
     useEffect(() => {
         if(props.Scroll == 'offerings') {
@@ -329,7 +377,48 @@ const Home =( props )=> {
                 </div>
             </div>
 
-            <div className="d-flex justify-content-center bg-white">
+            <div className="Key-Sucess bg-white pt-4">
+                <h2 className="text-center mx-5 mb-4"><strong>OUR FRAMEWORK KEY TO YOUR <span>SUCCESS</span></strong></h2>
+            
+
+            <div className="justify-content-center bg-white d-flex d-md-none">
+                <div className="col-11 col-sm-10">
+                    <div className="Diagram-Mobile position-relative px-3">
+                        <img src={DiagramX} alt="Skill Diagram" />
+
+                        <div className="Diagram-Action-Button">
+                            <button className="Expand-Skils pt-3 pb-2" onClick={expand_Skills}>
+                                {fullAnimate && (
+                                    <motion.h1
+                                        initial={{ scale:0.7 }}
+                                        animate={{ scale:1.5 }}
+                                        transition={{ duration: 0.5 }}>
+
+                                        <i class="bi bi-arrows-fullscreen"></i>
+                                    </motion.h1>
+                                )}
+
+                                {!fullAnimate && (
+                                    <motion.h1
+                                        initial={{ scale:1.5 }}
+                                        animate={{ scale:0.7 }}
+                                        transition={{ duration: 0.5 }}>
+
+                                        <i class="bi bi-arrows-fullscreen"></i>
+                                    </motion.h1>
+                                )}
+
+                                <p className="mx-3">
+                                    Click to see full screen
+                                </p>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div className="justify-content-center bg-white d-none d-md-flex">
                 <div className="col-11 col-lg-10">
                     <div className="row g-0">
                         <div className="col-2 Align-Arrow-Boxes">
@@ -338,15 +427,19 @@ const Home =( props )=> {
                                     <img className="Arrow-Box" src={ArrowBox} alt="Box-Arrow" />
 
                                     <div className="Arrow-Box-Content">
-                                        <h6 className="text-center ms-3 me-4">{detail}</h6>
+                                        <h6 className="text-center ms-3 me-4 mt-2">{detail}</h6>
                                     </div>
                                 </div>
                             ))}
                         </div>
 
                         <div className="col-10 d-flex flex-column">
-                            <div>
+                            <div className="position-relative">
                                 <img className="Full-Bar" src={FullBar} alt="Ful-Bar" />
+
+                                <div className="Full-Bar-Title">
+                                    <h1 className="T-Top">CUSTOMER NEEDS</h1>
+                                </div>
                             </div>
 
                             <div className="row g-0">
@@ -355,22 +448,32 @@ const Home =( props )=> {
                                         <img className="Small-Arr my-2" src={SmallArrow} alt="" />
 
                                         <div className="Arrow-Content px-3">
-                                            <p className="text-center mx-4 mt-5">{skill}</p>
+                                            <p className="text-center mx-4 mt-4">{skill}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
 
-                            <div>
+                            <div className="position-relative">
                                 <img className="Full-Bar mb-4" src={MiddleBar} alt="Middle-Bar" />
+
+                                <div className="Full-Bar-Title">
+                                    <h1 className="mb-4 T-End">END TO END CTO PANEL</h1>
+                                </div>
                             </div>
 
-                            <div>
+                            <div className="position-relative">
                                 <img className="Full-Bar" src={TitleHead} alt="Title-Head" />
+
+                                <div className="Full-Bar-Title">
+                                    <h1 className="mt-3 T-End"><strong>E-MATRIX CAMPUS</strong></h1>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+
             </div>
 
                 <div ref={scroll_Skillup} className="E-Matrix-Campus pt-5">
@@ -394,6 +497,16 @@ const Home =( props )=> {
                         </div>
                     </div>
             </div>
+
+            {expandSkill && (
+                <motion.div className="Skill-Popup d-flex d-md-none"
+                    initial={{ rotate: initial, scale:sizingOne }}
+                    animate={{ rotate: animate, scale: sizingTwo }}
+                    transition={{ duration: 0.2 }}>
+                    <img src={Diagram} alt="Skill-Diagram" />
+                    <h1 type="button" onClick={collapse_Skills}><i class="bi bi-box-arrow-in-up"></i></h1>
+                </motion.div>
+            )}
         </div>
     )
 }

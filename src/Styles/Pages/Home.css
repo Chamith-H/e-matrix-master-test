@@ -192,12 +192,12 @@
     background: rgb(255, 255, 255);
 }
 
-.Why-Choose h2, .Our-Offerings h2, .About-Us-Home h2, .E-Matrix-Campus h2 {
+.Why-Choose h2, .Our-Offerings h2, .About-Us-Home h2, .E-Matrix-Campus h2, .Key-Sucess h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(0, 0, 0);
 }
 
-.Why-Choose span, .Our-Offerings span, .About-Us-Home span, .E-Matrix-Campus span {
+.Why-Choose span, .Our-Offerings span, .About-Us-Home span, .E-Matrix-Campus span, .Key-Sucess span {
     color: #2B3990;
 }
 
@@ -305,6 +305,7 @@
 
 .Slide-View {
     box-shadow: 0px 7px 30px 0px #000000c5;
+    gap: 4px;
 }
 
 .Align-Arrow-Boxes {
@@ -357,6 +358,25 @@
     color: #ffffff;
 }
 
+.Full-Bar-Title {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.T-Top {
+    color: rgb(218,165,32);
+}
+
+.T-End {
+    color: #2B3990;
+}
+
 /* Animations */
 .Info-Why-Cards img {
     opacity: 0;
@@ -368,6 +388,71 @@
     animation-duration: 1s;
     animation-delay: 0.25s;
     animation-fill-mode: forwards;
+  }
+
+  .Skill-Popup {
+    position: fixed;
+    z-index: 200;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .Skill-Popup img {
+    width: 100%;
+  }
+
+  .Skill-Popup h1{
+    position: absolute;
+    right:20px;
+    bottom:10px;
+    color: #2B3990;
+  }
+
+  .Diagram-Mobile img {
+    width: 100%;
+  }
+
+  .Diagram-Action-Button {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.479);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Expand-Skils {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 10px 20px 3px #000000;
+    color: #ffffff;
+    background-color: #000000b0;
+  }
+
+  .Expand-Skils:active {
+    background-color: rgb(218,165,32);
+    color: #ffffff;
+  }
+
+  .Expand-Skils p {
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+
+  .Expand-Skils i {
+    color: #ffffff;
   }
   
   @keyframes slideIn {
@@ -382,7 +467,7 @@
   }
 
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 576px) {
 
     .Company-Status {
         height: calc(100vh - 20px);
@@ -416,5 +501,25 @@
     .Company-Introduction h2 {
         font-size: 22px;
         text-shadow: 2px 2px 2px #00000065;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .Arrow-Content p {
+        font-size: 12px;
+    }
+
+    .Arrow-Box-Content h6 {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .Arrow-Content p {
+        font-size: 14px;
+    }
+
+    .Arrow-Box-Content h6 {
+        font-size: 15px;
     }
 }
