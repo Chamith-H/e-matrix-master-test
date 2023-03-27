@@ -48,7 +48,7 @@ const About =()=> {
             <div className="About-Hero-Main">
                 <div className="About-Hero">
                     <div className="Align-About-Hero">
-                        <div className="col-11 col-lg-10">
+                        <div className="col-11 col-lg-10 About-Paragraph pt-2">
                             <p>As the 4th industrial revolution continues, new tech trends such as Datafication, Artificial Intelligence, low code – no code and of course Cloud, is set to grow at unprecedented levels. The availability of cost of tech talent with required skills would make be a challenge to many organizations. We at ematrix’s believe that Sri Lanka as a country, has many talented persons that can help customers to be successful in the digital age. We are proud to be able to offer Sri Lankan resources that would focus areas on Data, AI, Cloud Integrations, Automated Testing, RPA, low code, and DevSecOps.</p>
                             <p>We believe that technology is a powerful tool that can transform the way businesses operate. That is why we work tirelessly to develop cutting-edge solutions that can help our clients achieve their goals.</p>
                             <p>What sets us apart from other suppliers is our highly specialized and experienced team of Principal Architects. Our architects have worked on world-wide developments and bring a wealth of experience and knowledge to each project. We take pride in our team's expertise and provide our clients with the highest level of services. </p>

@@ -4,6 +4,13 @@
     z-index: -2;
 }
 
+@font-face {
+    font-family: 'TROGLO';
+    src: url('../../Assets/Fonts/TROGLO.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .Hero-Section {
     background-image: url("../../Assets/Home/HeroBackground.jpg");
     background-size: cover;
@@ -17,13 +24,13 @@
 }
 
 .Align-Hero {
-    background: linear-gradient(to bottom, rgba(126, 130, 189, 0.384), rgba(255, 255, 255, 0));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.63), rgba(0, 0, 0, 0.781));
     width: 100%;
     height: 100%;
 }
 
 .Align-Hero-Full {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0.432);
     width: 100%;
     height: 100%;
 }
@@ -78,29 +85,45 @@
 
 .Company-Introduction h1 {
     margin-bottom: 0px;
-    font-size: 70px;
+    font-size: 120px;
     color: rgb(218,165,32);
     text-shadow: 3px 3px 2px #000000;
+    font-family: 'TROGLO';
+    margin-bottom: 0;
 }
 
 .Company-Introduction span {
     color: #2B3990;
-    font-size: 76px;
     font-style: italic;
+    text-shadow: 0px 0px 0px #00000000;
 }
 
-.Company-Introduction h2 {
+.Intro-Default {
     color: #000000;
-    text-shadow: 2px 2px 2px #000000a1;
+    text-shadow: 0px 0px 6px #ffffff;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.Introduction-Scrolled {
+    color: #000000;
+    text-shadow: 2px 2px 1px #ffffff;
     font-weight: 500;
     margin-bottom: 40px;
 }
 
 .Hero-Explain {
     font-style: italic;
-    font-size: 19px;
-    color: rgb(51, 51, 51);
+    font-size: 21px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 2px #000000;
 }
+
+/* .Skill-Content {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(83, 83, 83);
+} */
 
 .Learn-More button, .More-Offerings {
     background-color: rgba(240, 242, 255, 0);
@@ -303,15 +326,24 @@
     color: rgb(218,165,32);
 }
 
-.Slide-View {
-    box-shadow: 0px 7px 30px 0px #000000c5;
-    gap: 4px;
+.Slide-Aligner {
+    margin-right:30px;
 }
 
 .Align-Arrow-Boxes {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.Slider-Shadow {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 42px;
+    width: 23px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: -8px 1px 10px -1px #000000;
 }
 
 .Small-Arr {
@@ -334,7 +366,7 @@
 }
 
 .Arrow-Content p {
-    font-size: 15px;
+    font-size: 14px;
     color: #ffffff;
     font-weight: 400;
 }
@@ -354,7 +386,12 @@
     width: 100%;
 }
 
+.Arrow-Active:hover {
+    margin-top: -15px;
+}
+
 .Arrow-Box-Content h6 {
+    font-size: 15px;
     color: #ffffff;
 }
 
@@ -486,12 +523,10 @@
         width: 100%;
     }
     
-    .Company-Introduction span {
-        font-size: 60px;
-    }
 
     .Company-Introduction h1 {
         font-size: 60px;
+        margin-left: -25px;
     }
 
     .Hero-Explain {
@@ -500,6 +535,7 @@
 
     .Company-Introduction h2 {
         font-size: 22px;
+        margin-left: -20px;
         text-shadow: 2px 2px 2px #00000065;
     }
 }

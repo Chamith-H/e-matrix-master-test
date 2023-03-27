@@ -51,6 +51,8 @@ const Home =( props )=> {
     const scroll_Skillup = useRef(null)
     const scroll_Home = useRef(null)
     const scroll_About = useRef(null)
+    const expander = useRef(null)
+    const viewSkill = useRef(null)
 
     const sliderBox = useRef(null)
     const slide = useRef(null)
@@ -61,9 +63,8 @@ const Home =( props )=> {
     const [sizingOne, setSizingOne] = useState(0)
     const [sizingTwo, setSizingTwo] = useState(0)
 
-    const [fullAnimate, setFulAnimate] = useState(true)
-    const [scaleUp, setScaleUp] = useState(0)
-    const [scaleDown, setScaleDown] = useState(1)
+    const [fullAnimate, setFulAnimate] = useState(false)
+    const [styler, setStyler] = useState(false)
 
     const contacts = [
                         {
@@ -181,14 +182,14 @@ const Home =( props )=> {
     const set_Slider_PREVIOUS =()=> {
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft -= (box + 4)
+            slide.current.scrollLeft -= (box + 30)
         }
     }
 
     const set_Slider_NEXT =()=> {
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft += (box + 4)
+            slide.current.scrollLeft += (box + 30)
         }
     }
 
@@ -221,13 +222,39 @@ const Home =( props )=> {
 
     useEffect(() => {
             
-            const timeoutId = setTimeout(() => {
-                setFulAnimate(!fullAnimate)
-            }, 500);
-
-        return () => clearTimeout(timeoutId);
+        function handleScroll() {
+            const centeredDivRect = expander.current.getBoundingClientRect();
+            const centerY = window.innerHeight;
+            
+            if (centeredDivRect.bottom < centerY ) {
+              setFulAnimate(true)
+            }
+        }
+          
+          window.addEventListener("scroll", handleScroll);
+          return () => {
+            window.removeEventListener("scroll", handleScroll);
+          };
         
-    }, [fullAnimate]);
+    }, []);
+
+    useEffect(() => {
+            
+        function handleScroll() {
+            const centeredDivRect = viewSkill.current.getBoundingClientRect();
+            const centerY = window.innerHeight;
+            
+            if (centeredDivRect.bottom < centerY ) {
+              setStyler(true)
+            }
+        }
+          
+          window.addEventListener("scroll", handleScroll);
+          return () => {
+            window.removeEventListener("scroll", handleScroll);
+          };
+        
+    }, []);
 
     useEffect(() => {
         if(props.Scroll == 'offerings') {
@@ -285,6 +312,8 @@ const Home =( props )=> {
         };
       }, []);
 
+      
+
     return (
         <div ref={scroll_Home} className="Home">
             <div className={scrolled?"Hero-Back sticky-top Hero-Back-Scrolled":"Hero-Back sticky-top Hero-Back-Default"}>
@@ -296,7 +325,7 @@ const Home =( props )=> {
 
             <div className="d-flex justify-content-center">
                 <div className="col-12 col-md-11 col-lg-10">
-                    <div className="Company-Status">
+                    <div className="Company-Status pt-4">
                         <div className="col-12">
                             <div className="row g-0 Style-Shadow">
                                 <div className="col-1 col-md-2"/>
@@ -306,9 +335,9 @@ const Home =( props )=> {
                                 <div className="col-1 col-md-2"/>
 
                                 <div className="col-11 col-md-10 pe-4 pe-md-0 Border2">
-                                    <div className="Company-Introduction ms-5">
+                                    <div className="Company-Introduction ms-5 mt-3 mb-5">
                                         <h1 className="text-start"><span>e-</span>Matrix</h1>
-                                        <h2 className="text-start"><strong>ENGINEERING THE DIGITAL FUTURE</strong></h2>
+                                        <h2 className={scrolled? "Introduction-Scrolled":"Intro-Default"}><strong>ENGINEERING THE DIGITAL FUTURE</strong></h2>
                                     </div>
                                 </div>
 
@@ -319,8 +348,8 @@ const Home =( props )=> {
                                 <div className="col-7 ps-3">
                                     <h5 className="text-start Hero-Explain"><strong>Transforming the digital world with trusted partnership and expert knowledge - where your success is our top priority.</strong></h5>
 
-                                    <div className="d-flex justify-content-start Learn-More">
-                                        <button onClick={()=>navigate("about-us")} className="ps-4 mt-1">Learn More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
+                                    <div className="d-flex justify-content-center Learn-More">
+                                        <button onClick={()=>navigate("about-us")} className="ps-4 mt-4">Learn More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -368,7 +397,7 @@ const Home =( props )=> {
                     <div className="col-12 col-md-11 col-lg-9 col-xl-12 px-2 px-sm-3 px-md-0">
                         <div ref={scroll_Why} className="row gx-0 gy-4 d-flex justify-content-center mt-2 Info-Why-Cards">
                             {benefits.map((benefit) => (
-                                <div ref={scroll_Why} className="col-6 col-sm-4 col-xl-2  px-1">
+                                <div className="col-6 col-sm-4 col-xl-2  px-1">
                                     <CardOne Title={benefit.title} Image={benefit.image} Description={benefit.description}/>
                                 </div>
                             ))}
@@ -387,22 +416,12 @@ const Home =( props )=> {
                         <img src={DiagramX} alt="Skill Diagram" />
 
                         <div className="Diagram-Action-Button">
-                            <button className="Expand-Skils pt-3 pb-2" onClick={expand_Skills}>
+                            <button ref={expander} className="Expand-Skils pt-3 pb-2" onClick={expand_Skills}>
                                 {fullAnimate && (
                                     <motion.h1
-                                        initial={{ scale:0.7 }}
+                                        initial={{ scale:0.5 }}
                                         animate={{ scale:1.5 }}
-                                        transition={{ duration: 0.5 }}>
-
-                                        <i class="bi bi-arrows-fullscreen"></i>
-                                    </motion.h1>
-                                )}
-
-                                {!fullAnimate && (
-                                    <motion.h1
-                                        initial={{ scale:1.5 }}
-                                        animate={{ scale:0.7 }}
-                                        transition={{ duration: 0.5 }}>
+                                        transition={{ duration: 1 }}>
 
                                         <i class="bi bi-arrows-fullscreen"></i>
                                     </motion.h1>
@@ -418,59 +437,76 @@ const Home =( props )=> {
                 </div>
             </div>
 
-            <div className="justify-content-center bg-white d-none d-md-flex">
-                <div className="col-11 col-lg-10">
-                    <div className="row g-0">
+            <div className="justify-content-center d-none d-md-flex">
+                <div className="col-11 col-lg-10 Skill-Content" ref={viewSkill}>
+                    {styler && (
+                    <div className="row g-0 px-xl-5 mx-lg-5  py-5">
                         <div className="col-2 Align-Arrow-Boxes">
-                            {details.map((detail) => (
-                                <div className="col-12 position-relative">
+                            {details.map((detail, index) => (
+                                <motion.div className="col-12 position-relative"
+                                initial={{ scale:0.5, y:200 }}
+                                animate={{ scale:1, y:0 }}
+                                transition={{ duration: index / 3 }}>
                                     <img className="Arrow-Box" src={ArrowBox} alt="Box-Arrow" />
 
                                     <div className="Arrow-Box-Content">
                                         <h6 className="text-center ms-3 me-4 mt-2">{detail}</h6>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))}
                         </div>
 
                         <div className="col-10 d-flex flex-column">
-                            <div className="position-relative">
+                            <motion.div className="position-relative"
+                                initial={{  y:-100 }}
+                                animate={{  y:0 }}
+                                transition={{ duration: 0.5}}>
                                 <img className="Full-Bar" src={FullBar} alt="Ful-Bar" />
 
                                 <div className="Full-Bar-Title">
                                     <h1 className="T-Top">CUSTOMER NEEDS</h1>
                                 </div>
-                            </div>
+                            </motion.div>
 
                             <div className="row g-0">
-                                {skills.map((skill) => (
-                                    <div className="col-2 position-relative">
+                                {skills.map((skill, index) => (
+                                    <motion.div className="col-2 position-relative Arrow-Active"
+                                    initial={{  y:100 }}
+                                    animate={{  y:0 }}
+                                    transition={{ duration: 1 / (index + 1)}}>
                                         <img className="Small-Arr my-2" src={SmallArrow} alt="" />
 
                                         <div className="Arrow-Content px-3">
                                             <p className="text-center mx-4 mt-4">{skill}</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
 
-                            <div className="position-relative">
+                            <motion.div className="position-relative"
+                                initial={{  y:-100 }}
+                                animate={{  y:0 }}
+                                transition={{ duration: 0.5}}>
                                 <img className="Full-Bar mb-4" src={MiddleBar} alt="Middle-Bar" />
 
                                 <div className="Full-Bar-Title">
                                     <h1 className="mb-4 T-End">END TO END CTO PANEL</h1>
                                 </div>
-                            </div>
+                            </motion.div>
 
-                            <div className="position-relative">
+                            <motion.div className="position-relative"
+                                initial={{  y:-100 }}
+                                animate={{  y:0 }}
+                                transition={{ duration: 0.5}}>
                                 <img className="Full-Bar" src={TitleHead} alt="Title-Head" />
 
                                 <div className="Full-Bar-Title">
                                     <h1 className="mt-3 T-End"><strong>E-MATRIX CAMPUS</strong></h1>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
+                    )}
                 </div>
             </div>
 
@@ -484,7 +520,7 @@ const Home =( props )=> {
                         <div className="col-9 col-sm-10 position-relative">
                             <div ref={slide} className="slide-container Slide-View">
                                 {slides.map((slide, index) => (
-                                    <div ref={sliderBox} key={index} className="col-12 col-sm-6 col-md-4 col-lg-3">
+                                    <div ref={sliderBox} key={index} className="col-12 col-sm-6 col-md-4 col-lg-3 Slide-Aligner">
                                         <CardFive Image={slide.background} Description={slide.description}/>
                                     </div>
                                 ))}
@@ -493,6 +529,10 @@ const Home =( props )=> {
                             <div className="Slider-Buttons">
                                 <button onClick={set_Slider_PREVIOUS}><i class="bi bi-arrow-left-circle-fill"></i></button>
                                 <button onClick={set_Slider_NEXT}><i class="bi bi-arrow-right-circle-fill"></i></button>
+
+                                <div className="Slider-Shadow d-none d-md-block">
+
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -128,7 +128,7 @@ const Footer =( props )=> {
                         </div>
 
                         <div className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-                            <p>Web Design by <span>Dynamic Biz.</span></p>
+                            <p>Web Design by <span><a href="https://hellodynamicbiz.com/" target="_blank">Dynamic Biz.</a></span></p>
                         </div>
                     </div>
                 </div>
