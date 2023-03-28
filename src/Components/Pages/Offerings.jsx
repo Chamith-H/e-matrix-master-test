@@ -82,7 +82,7 @@ const Offerings =()=> {
 
 
     return (
-        <div className="Offerings">
+        <div className="Offerings pb-5">
             <div ref={top} className="Top-Offering-Border mt-4"></div>
 
             <div className="col-11 col-lg-10 pt-4 pt-md-5">

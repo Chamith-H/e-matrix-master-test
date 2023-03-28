@@ -342,8 +342,8 @@
     bottom: 0;
     right: 42px;
     width: 23px;
-    background-color: rgb(0, 0, 0);
-    box-shadow: -8px 1px 10px -1px #000000;
+    background: rgba(0, 0, 0, 0.815);
+    box-shadow: -8px 1px 10px -1px #000000e7;
 }
 
 .Small-Arr {
@@ -422,8 +422,8 @@
   
   .Info-Why-Cards img.animate {
     animation-name: slideIn;
-    animation-duration: 1s;
-    animation-delay: 0.25s;
+    animation-duration: 0.75s;
+    animation-delay: 0s;
     animation-fill-mode: forwards;
   }
 

@@ -180,17 +180,51 @@ const Home =( props )=> {
         const details = ['Deployment with consistent monitoring', 'Upskill, cross skill and evaluate', 'Experience and fresh graduate harvesting']
 
     const set_Slider_PREVIOUS =()=> {
+        const duration = 350;
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft -= (box + 30)
-        }
+            const scrollLeft = slide.current.scrollLeft;
+            const scrollTarget = scrollLeft - box - 15;
+            const distance = Math.abs(scrollTarget - scrollLeft);
+            const speed = distance / duration;
+            
+            let startTime = null;
+            const animateScroll = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const timeElapsed = timestamp - startTime;
+              const scrollDistance = speed * timeElapsed;
+              slide.current.scrollLeft = scrollLeft + (scrollTarget > scrollLeft ? scrollDistance : -scrollDistance);
+              if (timeElapsed < duration) {
+                requestAnimationFrame(animateScroll);
+              }
+            };
+            
+            requestAnimationFrame(animateScroll);
+          }
     }
 
     const set_Slider_NEXT =()=> {
+        const duration = 350;
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
-            slide.current.scrollLeft += (box + 30)
-        }
+            const scrollLeft = slide.current.scrollLeft;
+            const scrollTarget = scrollLeft + box + 15;
+            const distance = Math.abs(scrollTarget - scrollLeft);
+            const speed = distance / duration;
+            
+            let startTime = null;
+            const animateScroll = (timestamp) => {
+              if (!startTime) startTime = timestamp;
+              const timeElapsed = timestamp - startTime;
+              const scrollDistance = speed * timeElapsed;
+              slide.current.scrollLeft = scrollLeft + (scrollTarget > scrollLeft ? scrollDistance : -scrollDistance);
+              if (timeElapsed < duration) {
+                requestAnimationFrame(animateScroll);
+              }
+            };
+            
+            requestAnimationFrame(animateScroll);
+          }
     }
 
     const expand_Skills =async()=> {
@@ -530,7 +564,7 @@ const Home =( props )=> {
                                 <button onClick={set_Slider_PREVIOUS}><i class="bi bi-arrow-left-circle-fill"></i></button>
                                 <button onClick={set_Slider_NEXT}><i class="bi bi-arrow-right-circle-fill"></i></button>
 
-                                <div className="Slider-Shadow d-none d-md-block">
+                                <div className="Slider-Shadow d-none d-sm-block">
 
                                 </div>
                             </div>
