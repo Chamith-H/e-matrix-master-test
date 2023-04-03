@@ -387,7 +387,8 @@
 }
 
 .Arrow-Active:hover {
-    margin-top: -15px;
+    /* transform: translateY(-10px); */
+    margin-top: -10px;
 }
 
 .Arrow-Box-Content h6 {

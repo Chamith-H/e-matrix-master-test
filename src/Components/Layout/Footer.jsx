@@ -99,12 +99,12 @@ const Footer =( props )=> {
                             <div className="Contact-With">
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
                                     <img src={Phone} alt="phone icon" />
-                                    <p>(+94) 077XXXXXXX</p>
+                                    <a href="tel:+94707382838"><p>(+94) 070 738 2838</p></a>
                                 </div>
 
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
                                     <img src={Skype} alt="skype icon" />
-                                    <p>e-Matrix.sample.io</p>
+                                    <p>info@ematrixit.com</p>
                                 </div>
                             </div>
 

@@ -180,7 +180,7 @@ const Home =( props )=> {
         const details = ['Deployment with consistent monitoring', 'Upskill, cross skill and evaluate', 'Experience and fresh graduate harvesting']
 
     const set_Slider_PREVIOUS =()=> {
-        const duration = 350;
+        const duration = 550;
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
             const scrollLeft = slide.current.scrollLeft;
@@ -204,7 +204,7 @@ const Home =( props )=> {
     }
 
     const set_Slider_NEXT =()=> {
-        const duration = 350;
+        const duration = 550;
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
             const scrollLeft = slide.current.scrollLeft;
@@ -494,7 +494,7 @@ const Home =( props )=> {
                             <motion.div className="position-relative"
                                 initial={{  y:-100 }}
                                 animate={{  y:0 }}
-                                transition={{ duration: 0.5}}>
+                                transition={{ duration: 1}}>
                                 <img className="Full-Bar" src={FullBar} alt="Ful-Bar" />
 
                                 <div className="Full-Bar-Title">
@@ -507,7 +507,7 @@ const Home =( props )=> {
                                     <motion.div className="col-2 position-relative Arrow-Active"
                                     initial={{  y:100 }}
                                     animate={{  y:0 }}
-                                    transition={{ duration: 1 / (index + 1)}}>
+                                    transition={{ duration: 2 / (index + 1)}}>
                                         <img className="Small-Arr my-2" src={SmallArrow} alt="" />
 
                                         <div className="Arrow-Content px-3">
@@ -520,7 +520,7 @@ const Home =( props )=> {
                             <motion.div className="position-relative"
                                 initial={{  y:-100 }}
                                 animate={{  y:0 }}
-                                transition={{ duration: 0.5}}>
+                                transition={{ duration: 1}}>
                                 <img className="Full-Bar mb-4" src={MiddleBar} alt="Middle-Bar" />
 
                                 <div className="Full-Bar-Title">
@@ -531,7 +531,7 @@ const Home =( props )=> {
                             <motion.div className="position-relative"
                                 initial={{  y:-100 }}
                                 animate={{  y:0 }}
-                                transition={{ duration: 0.5}}>
+                                transition={{ duration: 1}}>
                                 <img className="Full-Bar" src={TitleHead} alt="Title-Head" />
 
                                 <div className="Full-Bar-Title">

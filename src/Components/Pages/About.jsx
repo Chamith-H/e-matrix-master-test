@@ -97,7 +97,7 @@ const About =()=> {
                             <div className="CEO-References pt-3 pb-4 pe-0 pe-lg-4">
                                 <h6 className="text-center text-lg-end"><strong>Sincerely</strong>,</h6>
                                 <p className="text-center text-lg-end">Chrishan Fernando </p>
-                                <p className="text-center text-lg-end">CEO / Founder</p>
+                                <p className="text-center text-lg-end">Director / CEO</p>
                             </div>
                         </div>
                     </div>
