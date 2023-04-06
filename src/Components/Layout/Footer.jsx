@@ -1,7 +1,7 @@
 import "../../Styles/Layout/Footer.css"
 import Phone from "../../Assets/Icons/Phone.png"
 import Skype from "../../Assets/Icons/Skype.png"
-import Brand from "../../Assets/Logo/Brand.png"
+import Brand from "../../Assets/Logo/eMatrix Brand.png"
 
 import Facebook from "../../Assets/Icons/Facebook.png"
 import Twitter from "../../Assets/Icons/Twitter.png"

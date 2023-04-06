@@ -38,8 +38,8 @@ import FullBar from "../../Assets/Skills/FullBar.png"
 import ArrowBox from "../../Assets/Skills/ArrowBox.svg"
 import MiddleBar from "../../Assets/Skills/MiddleBar.png"
 import TitleHead from "../../Assets/Skills/TitleHead.png"
-import Diagram from "../../Assets/Skills/diagram.png"
-import DiagramX from "../../Assets/Skills/diagramAction.png"
+import Diagram from "../../Assets/Skills/eMatrix skill diagram.png"
+import DiagramX from "../../Assets/Skills/eMatrix skill diagramAction.png"
 
 const Home =( props )=> {
 

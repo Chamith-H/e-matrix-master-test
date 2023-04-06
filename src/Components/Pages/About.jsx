@@ -5,7 +5,7 @@ import Vision from "../../Assets/About/Vision.png"
 import Mission from "../../Assets/About/Mission.png"
 import Value from "../../Assets/About/Value.png"
 
-import CEOpic from "../../Assets/About/CEO.png"
+import CEOpic from "../../Assets/About/Chrishan Fernando ematrix.png"
 
 import { useEffect, useRef } from "react"
 

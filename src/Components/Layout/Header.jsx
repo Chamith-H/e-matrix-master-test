@@ -2,7 +2,7 @@ import "../../Styles/Layout/Header.css"
 import { useState, useEffect } from "react"
 import NavLinks from "../ReUsed/NavLinks"
 import { motion } from 'framer-motion';
-import Logo from "../../Assets/Logo/Logo.png"
+import Logo from "../../Assets/Logo/eMatrix Logo.png"
 import Toggler from "../../Assets/Icons/Toggler.png"
 import { useRef } from "react";
 
