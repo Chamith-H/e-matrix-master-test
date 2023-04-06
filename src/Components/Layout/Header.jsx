@@ -69,7 +69,7 @@ const Header =( props )=> {
             <div className="col-11 col-md-11 col-lg-10 d-flex justify-content-between">
                 <div className="Header-Brand">
                     <a className="Responsive-View" href="#/" onClick={()=> scroll_Wanted('home')}>
-                      <img className={scrolled?"Brand":"Initial"} src={Logo} alt="Brand logo" />
+                      <img className={scrolled?"Brand":"Initial"} src={Logo} alt="e matrix" />
                     </a>
                     
                 </div>
@@ -81,7 +81,7 @@ const Header =( props )=> {
 
                     <div>
                       <div className={scrolled? "d-md-none me-1 Toggler-Button":"d-md-none me-1 Toggler-Button"}>
-                        <img type='button' onClick={()=> setTogglerExpand(!togglerExpand)} className="Toggler" src={Toggler} alt="Toggler icon" />
+                        <img type='button' onClick={()=> setTogglerExpand(!togglerExpand)} className="Toggler" src={Toggler} alt="Toggler" />
                       </div>
 
                       <button onClick={()=> scroll_Wanted('contact')} className="ms-4 px-4 ScrolledButton d-none d-md-block">Contact Us</button>

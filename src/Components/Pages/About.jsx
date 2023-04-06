@@ -63,9 +63,9 @@ const About =()=> {
                 <div className="col-11 col-sm-10 pb-4">
                     <div className="Vision-Mission mb-5">
                         <div className="row g-2 d-flex justify-content-center">
-                            {vision_mission.map((role) => (
-                                <div className="col-12 col-sm-6">
-                                    <CardThree Title={role.title} Image={role.image} Description={role.description} List={role.values}/>
+                            {vision_mission.map((role, index) => (
+                                <div className="col-12 col-sm-6" key={index}>
+                                    <CardThree Title={role.title} Image={role.image} Description={role.description} List={role.values} key={index}/>
                                 </div>
                             ))}
                         </div>
@@ -80,7 +80,7 @@ const About =()=> {
                     <div className="row g-0 CEO-Row mt-4 mb-5">
                         <div className="col-12 col-lg-5 col-xl-4 CEO-Column py-4 py-md-5 py-lg-0 mb-2 mb-lg-0">
                             <div className="CEO-Box">
-                                <img src={CEOpic} alt="CEO" />
+                                <img src={CEOpic} alt="CEO Chrishan Fernando" />
                             </div>
                         </div>
 

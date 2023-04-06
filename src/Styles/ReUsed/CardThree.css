@@ -3,7 +3,7 @@
     min-height: 330px;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
     position: relative;
@@ -61,7 +61,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 576px) {
     .Role-Text p {
         font-size: 18px;
     }

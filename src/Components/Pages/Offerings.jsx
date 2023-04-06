@@ -104,8 +104,8 @@ const Offerings =()=> {
                                         <h5><strong>Expertise</strong></h5>
 
                                         <ul className="me-4">
-                                            {offer.expertise.map((experty) => (
-                                                <li>{experty}</li>
+                                            {offer.expertise.map((experty, index) => (
+                                                <li key={index}>{experty}</li>
                                             ))}
                                         </ul>
                                     </div>
@@ -116,8 +116,8 @@ const Offerings =()=> {
                                         <h5><strong>Technologies</strong></h5>
 
                                         <ul className="me-4">
-                                            {offer.technologies.map((technology) => (
-                                                <li>{technology}</li>
+                                            {offer.technologies.map((technology, index) => (
+                                                <li key={index}>{technology}</li>
                                             ))}
                                         </ul>
                                     </div>

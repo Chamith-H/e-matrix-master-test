@@ -41,7 +41,7 @@ const Footer =( props )=> {
     const scroll_Contact = useRef(null)
 
     useEffect(() => {
-        if(props.Catch == 'contact') {
+        if(props.Catch === 'contact') {
             scroll_Contact.current.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
     }, [props.Catch]);
@@ -52,12 +52,12 @@ const Footer =( props )=> {
                 <div className="row g-0">
                     <div className="col-12 col-md-4 d-flex justify-content-center justify-content-md-start pt-4 pb-5 py-md-0">
                         <div className="Brandings d-flex flex-column align-items-center">
-                            <img className="Footer-Logo" src={Brand} alt="e-matrix Logo" />
+                            <img className="Footer-Logo" src={Brand} alt="e-matrix" />
 
                             <div className="Contact-Buttons mt-3 d-none d-md-block">
-                                {socials.map((social) => (
-                                    <a href=''>
-                                        <img className="Contact-Image mx-2" src={social.icon} alt="Social button" />
+                                {socials.map((social, index) => (
+                                    <a href='#/' key={index}>
+                                        <img className="Contact-Image mx-2" src={social.icon} alt="Social" />
                                     </a>
                                 ))}
                             </div>
@@ -69,9 +69,9 @@ const Footer =( props )=> {
                             <h6><strong>Links</strong></h6>
 
                             <div className="d-flex flex-column">
-                                <a href="">Terms of Use</a>
-                                <a href="">Privacy</a>
-                                <a href="">Anti Spam</a>
+                                <a href="#/">Terms of Use</a>
+                                <a href="#/">Privacy</a>
+                                <a href="#/">Anti Spam</a>
                             </div>
                                 
                         </div>
@@ -82,10 +82,10 @@ const Footer =( props )=> {
                             <h6><strong>About Us</strong></h6>
 
                             <div className="d-flex flex-column">
-                                <a href="">About</a>
-                                <a href="">Careers</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Blog</a>
+                                <a href="#/">About</a>
+                                <a href="#/">Careers</a>
+                                <a href="#/">Contact Us</a>
+                                <a href="#/">Blog</a>
                             </div>
                         </div>
                       
@@ -98,20 +98,20 @@ const Footer =( props )=> {
 
                             <div className="Contact-With">
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
-                                    <img src={Phone} alt="phone icon" />
+                                    <img src={Phone} alt="phone" />
                                     <a href="tel:+94707382838"><p>(+94) 070 738 2838</p></a>
                                 </div>
 
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
-                                    <img src={Skype} alt="skype icon" />
+                                    <img src={Skype} alt="skype" />
                                     <p>info@ematrixit.com</p>
                                 </div>
                             </div>
 
                             <div className="Contact-Buttons mt-3 d-block d-md-none d-flex justify-content-center">
-                                {socials.map((social) => (
-                                    <a href=''>
-                                        <img className="Contact-Image mx-2" src={social.icon} alt="Social button" />
+                                {socials.map((social, index) => (
+                                    <a href="#/" key={index}>
+                                        <img className="Contact-Image mx-2" src={social.icon} alt="Social" />
                                     </a>
                                 ))}
                             </div>
@@ -128,7 +128,7 @@ const Footer =( props )=> {
                         </div>
 
                         <div className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
-                            <p>Web Design by <span><a href="https://hellodynamicbiz.com/" target="_blank">Dynamic Biz.</a></span></p>
+                            <p>Web Design by <span><a href="https://hellodynamicbiz.com/" target="_blank" rel="noreferrer">Dynamic Biz.</a></span></p>
                         </div>
                     </div>
                 </div>

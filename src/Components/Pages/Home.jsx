@@ -383,14 +383,14 @@ const Home =( props )=> {
                                     <h5 className="text-start Hero-Explain"><strong>Transforming the digital world with trusted partnership and expert knowledge - where your success is our top priority.</strong></h5>
 
                                     <div className="d-flex justify-content-center Learn-More">
-                                        <button onClick={()=>navigate("about-us")} className="ps-4 mt-4">Learn More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
+                                        <button onClick={()=>navigate("about-us")} className="ps-4 mt-4">Learn More &nbsp; <i className="bi bi-arrow-right-circle-fill"></i></button>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="Comany-Contacts d-flex justify-content-center justify-content-md-start">
-                                {contacts.map((contact) => (
-                                    <div className="Single-Contact">
+                                {contacts.map((contact, index) => (
+                                    <div key={index} className="Single-Contact">
                                         <a href="">
                                             <img src={contact.image} alt="Contact-Icon" />
                                         </a>
@@ -418,7 +418,7 @@ const Home =( props )=> {
                             </div>
 
                             <div className="d-flex justify-content-center justify-content-md-end pe-2">
-                                <button onClick={()=>navigate(`/offerings?choose=${0}`)} className="More-Offerings ps-4 mt-4 mt-md-3 mt-lg-2">See More &nbsp; <i class="bi bi-arrow-right-circle-fill"></i></button>
+                                <button onClick={()=>navigate(`/offerings?choose=${0}`)} className="More-Offerings ps-4 mt-4 mt-md-3 mt-lg-2">See More &nbsp; <i className="bi bi-arrow-right-circle-fill"></i></button>
                             </div>
                         </div>
                     </div>
@@ -430,8 +430,8 @@ const Home =( props )=> {
                 <div className="d-flex justify-content-center">
                     <div className="col-12 col-md-11 col-lg-9 col-xl-12 px-2 px-sm-3 px-md-0">
                         <div ref={scroll_Why} className="row gx-0 gy-4 d-flex justify-content-center mt-2 Info-Why-Cards">
-                            {benefits.map((benefit) => (
-                                <div className="col-6 col-sm-4 col-xl-2  px-1">
+                            {benefits.map((benefit, index) => (
+                                <div className="col-6 col-sm-4 col-xl-2  px-1" key={index}>
                                     <CardOne Title={benefit.title} Image={benefit.image} Description={benefit.description}/>
                                 </div>
                             ))}
@@ -457,7 +457,7 @@ const Home =( props )=> {
                                         animate={{ scale:1.5 }}
                                         transition={{ duration: 1 }}>
 
-                                        <i class="bi bi-arrows-fullscreen"></i>
+                                        <i className="bi bi-arrows-fullscreen"></i>
                                     </motion.h1>
                                 )}
 
@@ -477,7 +477,7 @@ const Home =( props )=> {
                     <div className="row g-0 px-xl-5 mx-lg-5  py-5">
                         <div className="col-2 Align-Arrow-Boxes">
                             {details.map((detail, index) => (
-                                <motion.div className="col-12 position-relative"
+                                <motion.div key={index} className="col-12 position-relative"
                                 initial={{ scale:0.5, y:200 }}
                                 animate={{ scale:1, y:0 }}
                                 transition={{ duration: index / 3 }}>
@@ -504,7 +504,7 @@ const Home =( props )=> {
 
                             <div className="row g-0">
                                 {skills.map((skill, index) => (
-                                    <motion.div className="col-2 position-relative Arrow-Active"
+                                    <motion.div key={index} className="col-2 position-relative Arrow-Active"
                                     initial={{  y:100 }}
                                     animate={{  y:0 }}
                                     transition={{ duration: 2 / (index + 1)}}>
@@ -561,8 +561,8 @@ const Home =( props )=> {
                             </div>
 
                             <div className="Slider-Buttons">
-                                <button onClick={set_Slider_PREVIOUS}><i class="bi bi-arrow-left-circle-fill"></i></button>
-                                <button onClick={set_Slider_NEXT}><i class="bi bi-arrow-right-circle-fill"></i></button>
+                                <button onClick={set_Slider_PREVIOUS}><i className="bi bi-arrow-left-circle-fill"></i></button>
+                                <button onClick={set_Slider_NEXT}><i className="bi bi-arrow-right-circle-fill"></i></button>
 
                                 <div className="Slider-Shadow d-none d-sm-block">
 
@@ -578,7 +578,7 @@ const Home =( props )=> {
                     animate={{ rotate: animate, scale: sizingTwo }}
                     transition={{ duration: 0.2 }}>
                     <img src={Diagram} alt="Skill-Diagram" />
-                    <h1 type="button" onClick={collapse_Skills}><i class="bi bi-box-arrow-in-up"></i></h1>
+                    <h1 type="button" onClick={collapse_Skills}><i className="bi bi-box-arrow-in-up"></i></h1>
                 </motion.div>
             )}
         </div>
