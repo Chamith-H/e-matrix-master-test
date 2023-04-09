@@ -208,7 +208,7 @@ const Home =( props )=> {
         if(sliderBox.current !=null) {
             const box = sliderBox.current.offsetWidth;
             const scrollLeft = slide.current.scrollLeft;
-            const scrollTarget = scrollLeft + box + 15;
+            const scrollTarget = scrollLeft + box + 17;
             const distance = Math.abs(scrollTarget - scrollLeft);
             const speed = distance / duration;
             

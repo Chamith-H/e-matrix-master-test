@@ -71,7 +71,7 @@ const Footer =( props )=> {
                             <div className="d-flex flex-column">
                                 <a href="#/">Terms of Use</a>
                                 <a href="#/">Privacy</a>
-                                <a href="#/">Anti Spam</a>
+                                {/* <a href="#/">Anti Spam</a> */}
                             </div>
                                 
                         </div>
@@ -82,10 +82,10 @@ const Footer =( props )=> {
                             <h6><strong>About Us</strong></h6>
 
                             <div className="d-flex flex-column">
-                                <a href="#/">About</a>
-                                <a href="#/">Careers</a>
+                                <a href="#/about-us">About</a>
+                                {/* <a href="#/">Careers</a> */}
                                 <a href="#/">Contact Us</a>
-                                <a href="#/">Blog</a>
+                                {/* <a href="#/">Blog</a> */}
                             </div>
                         </div>
                       
@@ -99,7 +99,7 @@ const Footer =( props )=> {
                             <div className="Contact-With">
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
                                     <img src={Phone} alt="phone" />
-                                    <a href="tel:+94707382838"><p>(+94) 070 738 2838</p></a>
+                                    <a href="tel:+94707382838"><p>+9470 738 2838</p></a>
                                 </div>
 
                                 <div className="Contacting d-flex justify-content-center justify-content-md-start">
